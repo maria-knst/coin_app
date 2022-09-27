@@ -1,0 +1,16 @@
+.parent{
+    height: 100%;
+    position: relative;
+}
+
+.caseElement{
+    height: 80%;
+    border: 1px solid #A8A2A22A;
+    display: flex;
+    align-items: center;
+}
+
+.caseElement:hover{
+    border: 1px solid #000000;
+    border-radius: 8px;
+}

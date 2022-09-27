@@ -1,5 +1,10 @@
-
-.popular-crypto_container{
+.popularCrypto_container{
     display: flex;
-    background: bisque;
+    gap: 4px;
+}
+
+.popularCrypto_element{
+    margin: auto;
+    padding: 2% 4%;
+    border: 1px solid #A8A2A22A;
 }

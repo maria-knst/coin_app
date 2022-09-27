@@ -1,14 +1,14 @@
 import React from 'react';
-import {POPULAR_CRYPTO} from "../../../TestInfo/utils";
+import {POPULAR_CRYPTO} from "../../TestInfo/utils";
 
-import "./PopularCrypto.module.css"
+import styles from "./PopularCrypto.module.css"
 
 const PopularCrypto = () => {
     return (
-        <div className="popular-crypto_container">
-            {POPULAR_CRYPTO.map((item)=>
-                <div>
-                    <span>{item[0]}</span>
+        <div className={styles.popularCrypto_container}>
+            {POPULAR_CRYPTO.map((item, index)=>
+                <div className={styles.popularCrypto_element} key={index}>
+                    <span>{item[0]} </span>
                     <span>{item[1]}</span>
                 </div>
             )}

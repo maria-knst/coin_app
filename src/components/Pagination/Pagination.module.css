@@ -1,0 +1,12 @@
+.pag_container{
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.pag_item{
+    display: inline-block;
+    padding: 2px 8px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
