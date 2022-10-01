@@ -2,6 +2,7 @@ export const POPULAR_CRYPTO = [
     ['BTC', 20.206], ["ETH", 1.386], ["USDT", 1.0002]
 ]
 
+export const showingCrypts = 20;
 
 export const CRYPTOS = [
     {

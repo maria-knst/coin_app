@@ -3,21 +3,15 @@ import React, {useEffect, useState} from 'react';
 import style from './CryptoTable.module.css'
 import CryptoTableElement from "../CryptoTableElement/CryptoTableElement";
 
+import {showingCrypts} from "../../TestInfo/utils";
 
-const CryptoTable = () => {
+const CryptoTable = ({ data, showingPage }) => {
 
-    const [data, setData] = useState([])
-
-
-    const fetchCrypto = async () => {
-        const response = await fetch('https://api.coincap.io/v2/assets')
-        const result = await response.json()
-        setData(result.data.slice(0,20))
+    const showPage = () => {
+        const start =  (showingPage - 1) * showingCrypts;
+        const end = start + showingCrypts;
+        return data.slice(start, end)
     }
-
-    useEffect(() => {
-        fetchCrypto()
-    }, [])
 
     return (
         <table className={style.cryptoTable}>
@@ -31,10 +25,9 @@ const CryptoTable = () => {
             </thead>
             <tbody>
             {
-                data.map((item) =>
+                showPage().map((item) =>
                 <CryptoTableElement name={item.name} symbol={item.symbol} volume={item.volumeUsd24Hr} lastChange={item.changePercent24Hr} key={item.rank} />
-                )
-            }
+                )}
             </tbody>
         </table>
     );

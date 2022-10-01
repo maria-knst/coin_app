@@ -10,3 +10,8 @@
     border: 1px solid black;
     border-radius: 4px;
 }
+
+.pag_item:hover{
+    background: #A8A2A22A;
+    border-radius: 2px;
+}

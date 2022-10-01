@@ -2,14 +2,25 @@ import React from 'react';
 
 import styles from './Pagination.module.css'
 
-const Pagination = () => {
+const Pagination = ({ setPage, amount }) => {
+
+    const getPaginations = (length) => {
+        let content = [];
+        for (let i = 0; i < length; i++) {
+            content.push(<div className={styles.pag_item} onClick={handleClick} key={i}>{i+1}</div>);
+        }
+        return content
+    };
+
+    const handleClick = (e) => {
+        e.preventDefault()
+        const res = +e.target.innerText;
+        setPage(res)
+    }
+
     return (
         <div className={styles.pag_container}>
-            <div className={styles.pag_item}>1</div>
-            <div className={styles.pag_item}>2</div>
-            <div className={styles.pag_item}>3</div>
-            <div className={styles.pag_item}>4</div>
-            <div className={styles.pag_item}>5</div>
+            {getPaginations(amount)}
         </div>
     );
 };
