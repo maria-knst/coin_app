@@ -1,5 +1,5 @@
 import React from 'react';
-import {POPULAR_CRYPTO} from "../../TestInfo/utils";
+import {POPULAR_CRYPTO} from "../../utils/utils";
 
 import styles from "./PopularCrypto.module.css"
 

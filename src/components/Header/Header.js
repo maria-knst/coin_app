@@ -3,7 +3,7 @@ import PopularCrypto from "../PopularCrypto/PopularCrypto";
 
 import styles from './Header.module.css'
 import Briefcase from "../Briefcase/Briefcase";
-import ModalBriefcase from "../ModalBriefcase/ModalBriefcase";
+
 
 const Header = () => {
     return (

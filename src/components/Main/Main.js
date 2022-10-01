@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import CryptoTable from "../CryptoTable/CryptoTable";
 import Pagination from "../Pagination/Pagination"
 
-import {showingCrypts} from "../../TestInfo/utils";
+import {showingCrypts} from "../../utils/utils";
 
 import styles from './Main.module.css'
 

@@ -4,6 +4,15 @@ export const POPULAR_CRYPTO = [
 
 export const showingCrypts = 20;
 
+const getPercent = (all, part) => {
+    if(all === 0){
+        return 0
+    }
+    return part / all * 100;
+}
+
+export { getPercent }
+
 export const CRYPTOS = [
     {
         "id": "bitcoin",

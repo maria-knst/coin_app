@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 
 import style from './CryptoTable.module.css'
 import CryptoTableElement from "../CryptoTableElement/CryptoTableElement";
 
-import {showingCrypts} from "../../TestInfo/utils";
+import {showingCrypts} from "../../utils/utils";
 
 const CryptoTable = ({ data, showingPage }) => {
 
@@ -19,14 +19,14 @@ const CryptoTable = ({ data, showingPage }) => {
             <tr>
                 <td>Name</td>
                 <td>Symbol</td>
-                <td>Volume</td>
+                <td>Price USD</td>
                 <td>Last change24</td>
             </tr>
             </thead>
             <tbody>
             {
                 showPage().map((item) =>
-                <CryptoTableElement name={item.name} symbol={item.symbol} volume={item.volumeUsd24Hr} lastChange={item.changePercent24Hr} key={item.rank} />
+                <CryptoTableElement item={item} key={item.rank} />
                 )}
             </tbody>
         </table>
