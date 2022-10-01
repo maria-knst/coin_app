@@ -1,5 +1,16 @@
 .modal{
+    width: 100%;
+    padding: 4px;
     position: absolute;
+    z-index: 4;
+    background: #A8A2A22A;
     top: 100%;
     right: 0;
+
+}
+
+li{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
 }
