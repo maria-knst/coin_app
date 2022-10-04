@@ -1,26 +1,28 @@
-import React from 'react';
-
 import styles from './CryptoTableElement.module.css'
-import {useDispatch} from "react-redux";
 
-import {ACTION_ADD} from "../../ducks/briefcase";
+import ModalAdditing from "../ModalAdditing/ModalAdditing";
+import {useState} from "react";
 
-const CryptoTableElement = ({ item }) => {
+const CryptoTableElement = ({ item}) => {
 
-    const dispatch = useDispatch()
+    const [visible, setVisible] = useState()
 
-    const handleAddClick = () =>{
-        dispatch(ACTION_ADD(item))
+    const handleAddClick = (e) =>{
+        e.preventDefault()
+        setVisible(!visible)
     }
 
     return (
-        <tr className={styles.element}>
-            <td>{item.name}</td>
-            <td>{item.symbol}</td>
-            <td>{Number(item.priceUsd).toFixed(2)}</td>
-            <td>{Number(item.changePercent24Hr).toFixed(4)}</td>
-            <td><button onClick={handleAddClick}>+</button></td>
-        </tr>
+            <tr className={styles.element}>
+                <td>{item.name}</td>
+                <td>{item.symbol}</td>
+                <td>{Number(item.priceUsd).toFixed(2)}</td>
+                <td>{Number(item.changePercent24Hr).toFixed(4)}</td>
+                <td className={styles.trElement}>
+                    <button onClick={handleAddClick}>Add</button>
+                    {visible && <ModalAdditing className={styles.addElement} sendItem={item} setVisible={setVisible}/>}
+                </td>
+            </tr>
     );
 };
 

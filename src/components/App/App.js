@@ -1,14 +1,30 @@
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+
 import Header from "../Header/Header";
 import Main from "../Main/Main";
 
 import styles from './App.module.css'
+import CryptoPage from "../CryptoPage/CryptoPage";
+import CryptoPageContextProvider from "../../context/CryptoPageContext/CryptoPageContextProvider";
+import {useState} from "react";
 
 function App() {
+    const [contextItem, setContextItem] = useState(null)
+
   return (
-    <div className={styles.App}>
-      <Header />
-      <Main />
-    </div>
+      <Router>
+        <Routes>
+            <Route path="/" element={
+                <CryptoPageContextProvider value={{contextItem, setContextItem}}>
+                    <div className={styles.App}>
+                        <Header />
+                        <Main />
+                    </div>
+                </CryptoPageContextProvider>
+            }/>
+            <Route path="/page" element={<CryptoPage item={contextItem}/>}/>
+        </Routes>
+      </Router>
   );
 }
 

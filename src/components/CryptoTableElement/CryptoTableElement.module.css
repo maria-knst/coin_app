@@ -1,2 +1,25 @@
 .element{
+    border: 1px solid #ffffff;
+}
+
+.content {
+    display: block;
+    color: inherit;
+    padding: 5px 10px;
+}
+
+.element:hover{
+    border: 1px solid #000000;
+}
+.addElement{
+    position: absolute;
+    top: 100%;
+    right: 0;
+}
+
+.trElement{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: relative;
 }

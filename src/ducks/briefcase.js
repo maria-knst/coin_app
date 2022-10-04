@@ -14,6 +14,7 @@ export const ACTION_DELETE = (payload) => ({
     payload: payload,
 });
 
+
 //INITIAL STATE
 export const initialState = {
     bagData: [],
@@ -26,28 +27,29 @@ export const initialState = {
 
 //REDUSER
 export const reduser = (state, action) =>{
-    if(action.type === ADD){
-        return {
-            ...state,
-            bagData: [...state.bagData, action.payload],
-            count: (Number(state.count) + Number(action.payload.priceUsd)).toFixed(2),
-            refill: {
-                value: Number(action.payload.priceUsd).toFixed(2),
-                direction: true,
+    switch (action.type){
+        case ADD: {
+            return {
+                ...state,
+                bagData: [...state.bagData, action.payload.item],
+                count: (Number(state.count) + Number(action.payload.item.priceUsd) * Number(action.payload.item.multiplier)).toFixed(2),
+                refill: {
+                    value: (Number(action.payload.item.priceUsd)  * Number(action.payload.item.multiplier)).toFixed(2),
+                    direction: true,
+                }
             }
         }
-    }
-    if(action.type === DELETE){
-        return {
-            ...state,
-            bagData: state.bagData.filter((item) => item.id !== action.payload.id),
-            count: (Number(state.count) - Number(action.payload.priceUsd)).toFixed(2),
-            refill: {
-                value: Number(action.payload.priceUsd).toFixed(2),
-                direction: false,
+        case DELETE: {
+            return {
+                ...state,
+                bagData: state.bagData.filter((item) => item.id !== action.payload.item.id),
+                count: (Number(state.count) - (Number(action.payload.item.priceUsd)  * Number(action.payload.item.multiplier))).toFixed(2),
+                refill: {
+                    value: (Number(action.payload.item.priceUsd) * Number(action.payload.item.multiplier)).toFixed(2),
+                    direction: false,
+                }
             }
         }
+        default: return {...state}
     }
-
-    return state;
 }

@@ -1,4 +1,5 @@
-import React, {useEffect, useState} from 'react';
+import { useState, useEffect } from "react";
+
 import CryptoTable from "../CryptoTable/CryptoTable";
 import Pagination from "../Pagination/Pagination"
 

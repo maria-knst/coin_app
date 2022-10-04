@@ -1,5 +1,3 @@
-import React from 'react';
-
 import style from './CryptoTable.module.css'
 import CryptoTableElement from "../CryptoTableElement/CryptoTableElement";
 

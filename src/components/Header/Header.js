@@ -1,4 +1,3 @@
-import React from 'react';
 import PopularCrypto from "../PopularCrypto/PopularCrypto";
 
 import styles from './Header.module.css'
