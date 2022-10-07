@@ -11,11 +11,7 @@
 .element:hover{
     border: 1px solid #000000;
 }
-.addElement{
-    position: absolute;
-    top: 100%;
-    right: 0;
-}
+
 
 .trElement{
     display: flex;

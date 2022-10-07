@@ -31,7 +31,7 @@ const ModalAdditing = ({sendItem, setVisible, ...props}) => {
     return (
         <div {...props}>
                 <input type='text' name="sendingValue" value={sendingValue} onChange={handleChange}/>
-            <button onClick={handleAddClick}>++</button>
+            <button onClick={handleAddClick}>+</button>
         </div>
     );
 };

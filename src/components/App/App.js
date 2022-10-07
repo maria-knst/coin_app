@@ -22,7 +22,7 @@ function App() {
                     </div>
                 </CryptoPageContextProvider>
             }/>
-            <Route path="/page" element={<CryptoPage item={contextItem}/>}/>
+            <Route path="/page/:itemId" element={<CryptoPage />}/>
         </Routes>
       </Router>
   );

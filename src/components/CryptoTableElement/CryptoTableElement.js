@@ -1,26 +1,18 @@
 import styles from './CryptoTableElement.module.css'
 
-import ModalAdditing from "../ModalAdditing/ModalAdditing";
-import {useState} from "react";
+import {Link} from "react-router-dom";
+import AddButton from "../AddButton/AddButton/AddButton";
 
 const CryptoTableElement = ({ item}) => {
 
-    const [visible, setVisible] = useState()
-
-    const handleAddClick = (e) =>{
-        e.preventDefault()
-        setVisible(!visible)
-    }
-
     return (
             <tr className={styles.element}>
-                <td>{item.name}</td>
+                <td><Link to={`/page/${item.id}`}>{item.name}</Link></td>
                 <td>{item.symbol}</td>
                 <td>{Number(item.priceUsd).toFixed(2)}</td>
                 <td>{Number(item.changePercent24Hr).toFixed(4)}</td>
                 <td className={styles.trElement}>
-                    <button onClick={handleAddClick}>Add</button>
-                    {visible && <ModalAdditing className={styles.addElement} sendItem={item} setVisible={setVisible}/>}
+                    <AddButton item={item}/>
                 </td>
             </tr>
     );
