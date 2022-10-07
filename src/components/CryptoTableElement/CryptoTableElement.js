@@ -7,7 +7,7 @@ const CryptoTableElement = ({ item}) => {
 
     return (
             <tr className={styles.element}>
-                <td><Link to={`/page/${item.id}`}>{item.name}</Link></td>
+                <td><Link to={`/page/${item.id}`} className={styles.linkElement}>{item.name}</Link></td>
                 <td>{item.symbol}</td>
                 <td>{Number(item.priceUsd).toFixed(2)}</td>
                 <td>{Number(item.changePercent24Hr).toFixed(4)}</td>

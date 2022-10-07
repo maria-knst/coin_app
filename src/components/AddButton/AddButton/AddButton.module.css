@@ -1,3 +1,19 @@
 .buttonContainer{
     position: relative;
 }
+
+.buttonElem{
+    background-color: #000000; /* Green */
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    margin: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.buttonElem:hover{
+    opacity: 0.8;
+}

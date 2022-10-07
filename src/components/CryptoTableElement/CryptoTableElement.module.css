@@ -19,3 +19,11 @@
     align-items: end;
     position: relative;
 }
+
+.linkElement{
+    color: #000000;
+}
+
+.linkElement:hover{
+    color: #a59e9e;
+}

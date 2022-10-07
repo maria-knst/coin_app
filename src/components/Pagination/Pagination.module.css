@@ -1,4 +1,5 @@
 .pag_container{
+    margin: 8px;
     width: 20%;
     display: flex;
     justify-content: space-around;

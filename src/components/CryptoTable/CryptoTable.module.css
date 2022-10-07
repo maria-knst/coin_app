@@ -3,6 +3,9 @@
     height: 70%;
     border: 1px solid #A8A2A22A;
     border-radius: 8px;
+
+    position: relative;
+    z-index: 1;
 }
 .headElement{
     font-weight: 600;

@@ -5,7 +5,6 @@ import {ACTION_DELETE} from "../../ducks/briefcase";
 const ModalBriefcase = () => {
 
     const arr_data = useSelector((state) => state.bagData);
-    //const price = useSelector((state) => state.refill.value);
 
     const dispatch = useDispatch()
 
@@ -19,7 +18,7 @@ const ModalBriefcase = () => {
             <ul>
             {
                 arr_data.map((item, index) =>
-                    <li key={index}>{item.name} <span>{(Number(item.priceUsd) * Number(item.multiplier)).toFixed(2)}</span> <button onClick={handleDeleteClick.bind(this, item)}>-</button></li>
+                    <li key={index}>{item.name} <span>{(Number(item.priceUsd) * Number(item.multiplier)).toFixed(2)}</span> <button className={styles.buttonElem} onClick={handleDeleteClick.bind(this, item)}>-</button></li>
                 )
             }
             </ul>

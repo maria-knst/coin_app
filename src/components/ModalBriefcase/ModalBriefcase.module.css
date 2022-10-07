@@ -2,15 +2,30 @@
     width: 100%;
     padding: 4px;
     position: absolute;
-    z-index: 4;
+    z-index: 999;
     background: #A8A2A22A;
     top: 100%;
     right: 0;
-
 }
 
 li{
     display: flex;
     justify-content: space-between;
     list-style-type: none;
+}
+
+.buttonElem{
+    background-color: #000000; /* Green */
+    border: 1px solid white;
+    color: white;
+    padding: 8px 12px;
+    margin: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.buttonElem:hover{
+    opacity: 0.8;
 }

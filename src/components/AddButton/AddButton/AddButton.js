@@ -15,7 +15,7 @@ const AddButton = ({ item }) => {
 
     return (
         <div className={style.buttonContainer}>
-            <button onClick={handleAddClick}>Add</button>
+            <button className={style.buttonElem} onClick={handleAddClick}>Add</button>
             {visible && <ModalAdditing className={styles.addElement} sendItem={item} setVisible={setVisible}/>}
         </div>
 

@@ -8,3 +8,10 @@
     padding: 2% 4%;
     border: 1px solid #A8A2A22A;
 }
+
+
+@media (max-width: 640px) {
+    .popularCrypto_container{
+        display: none;
+    }
+}

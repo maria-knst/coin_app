@@ -2,6 +2,8 @@ import {useState} from "react";
 import {useDispatch} from "react-redux";
 import {ACTION_ADD} from "../../ducks/briefcase";
 
+import style from './ModalAdditing.module.css'
+
 const ModalAdditing = ({sendItem, setVisible, ...props}) => {
 
     const dispatch = useDispatch()
@@ -31,7 +33,7 @@ const ModalAdditing = ({sendItem, setVisible, ...props}) => {
     return (
         <div {...props}>
                 <input type='text' name="sendingValue" value={sendingValue} onChange={handleChange}/>
-            <button onClick={handleAddClick}>+</button>
+            <button className={style.buttonElem} onClick={handleAddClick}>+</button>
         </div>
     );
 };

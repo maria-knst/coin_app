@@ -4,5 +4,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
+}
+
+@media (max-width: 640px) {
+    .main{
+        padding: 12px 0;
+        font-size: 18px;
+    }
 }

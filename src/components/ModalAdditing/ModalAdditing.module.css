@@ -3,3 +3,29 @@
     top: 100%;
     right: 0;
 }
+
+.buttonElem{
+    background-color: #000000; /* Green */
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    margin: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.buttonElem:hover{
+    opacity: 0.8;
+}
+
+input{
+    height: 36px;
+}
+
+@media (max-width: 1020px) {
+    input{
+        width: 40px;
+    }
+}
