@@ -16,7 +16,7 @@ const ModalAdditing = ({sendItem, setVisible, ...props}) => {
 
     const handleAddClick = (e) =>{
         e.preventDefault()
-        if(String(sendingValue).match(/^\d+.?\d*$/)){
+        if(String(sendingValue).match(/^\d+\.?\d*$/)){
             sendItem.multiplier = Number(sendingValue)
             dispatch(ACTION_ADD({
                 item: sendItem
