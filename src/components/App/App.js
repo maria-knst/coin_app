@@ -12,7 +12,7 @@ function App() {
     const [contextItem, setContextItem] = useState(null)
 
   return (
-      <Router>
+      <Router basename="/">
         <Routes>
             <Route path="/" element={
                 <CryptoPageContextProvider value={{contextItem, setContextItem}}>
