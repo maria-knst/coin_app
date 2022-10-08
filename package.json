@@ -2,7 +2,7 @@
   "name": "coin_app",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://maria-knst.github.io/",
+  "homepage": "https://maria-knst.github.io/coin_app",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
