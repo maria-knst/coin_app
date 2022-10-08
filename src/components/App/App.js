@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { HashRouter as Router, Route, Routes } from 'react-router-dom'
 
 import Header from "../Header/Header";
 import Main from "../Main/Main";
@@ -12,7 +12,7 @@ function App() {
     const [contextItem, setContextItem] = useState(null)
 
   return (
-      <Router basename="/">
+      <Router>
         <Routes>
             <Route path="/" element={
                 <CryptoPageContextProvider value={{contextItem, setContextItem}}>
